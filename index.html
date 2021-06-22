@@ -1,0 +1,129 @@
+<!--NLW AULA 1/5 20/06/2021-->
+<!--Instrutor Mayk Brito-->
+
+<!--SOBRE O PROJETO-->
+<!--Implementar projeto similar ao projeto no Figma, podendo adaptar para conteúdo de outro tipo de negócio.-->
+
+<!--O QUE É PROGRAMAÇÃO-->
+<!--Ensinar o computador, por meio de algoritmos (passo a passo e regras), com base de lógica de programação (que é uma "maneira de pensar" do computador) estruturada em sintaxes (daí a importância da maneira correta de escrever) de linguagens de marcação (HTML), de estilo (CSS) e de programação (JavaScript).-->
+
+<!--FRONT-END E BACK-END-->
+<!--Comunicação cliente-servidor (cliente chama com uma requisição e o servidor escuta e responde) é feita com uso de HTTP (hyper text transfer protocol), URL (universal resource location) e troca de dados. As tecnologias a serem utilizadas serão HTML, CSS e Javascript.-->
+
+<!--HTML-->
+<!-- <p id="meuId">Texto do parágrafo</p> -->
+
+<!--CSS - Cascading Style Sheets-->
+<!--Toda estrutura possui um seletor e entre chaves uma declaração que contém uma propriedade e um valor.-->
+<!-- body {color: #333333; } -->
+<!--O Conceito de cascata se dá pela lógica de organização do código em CSS, em que uma configuração posterior se sobrepõe a outra configuração aplicada acima no código.-->
+<!--Pelo conceito da especificidade, uma configuração de um tipo de elemento referenciado, essa configuração se sobrepõe a outras configurações do mesmo tipo de elemento que se apliquem aos demais elementos do mesmo tipo.-->
+<!--Responsividade (relative vs static units e with vs without breakpoints) é um tema relevante cuja natureza pede que uma solução seja construída primeiramente para mobile (mobile first)-->
+<!--O Box Model é uma estrutura de espaçamentos entre elementos, indo do maior para o menor com: margin, border, padding, height, width (content)-->
+
+<!-- Exemplo de código em CSS:
+    :root {
+    --header-height: 4.5rem;
+  
+    /* colors */
+    --hue: 159;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+  }-->
+
+<!--INÍCIO DO CÓDIGO EM HTML-->
+<!--Indica se tratar de um código em HTML5-->
+<!DOCTYPE html>
+
+<!--ABERTURA DO HTML-->
+<!--Abre e envolve todo os elementos do arquivo html, tanto os que são exibidos, como os que não são exibidos para os usuários.-->
+<html lang="pt-br">
+
+<!--HEAD DO HTML-->
+<!--Define regras e parâmetros gerais do arquivo HTML-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BECKT Advogados</title>
+
+<!--ESTILOS VINCULADOS À PÁGINA-->
+    <link rel="stylesheet" href="style.css" />
+
+<!--FONTES VINCULADAS À PÁGINA-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<!--BODY DO HTML-->
+<!--Contém todo o conteúdo do HTML que é exibido ao usuário.-->
+<body>
+
+<!--HEADER DO HTML-->
+<!--Apresenta os elementos da parte superior da página.-->
+<header id="header">
+
+<!--TAG SEMÂNTICA PARA NAVEGAÇÃO-->
+<!--Apresenta itens para navegação dentro ou para fora da página por meio de links.-->
+<nav class="container">
+
+<!--TÍTULOS EM HTML-->
+<!--As tags h1 a h6 apresentam títulos na página.-->
+<a class="logo" href="#"><span>BECKT</span> Advogados Associados</a>
+    
+<!--DIVISÃO DA PÁGINA HTML-->
+<!--Apresenta os elementos de alguma divisão da página.-->
+<div class="menu">o o o</div>
+
+</nav>
+</header>
+
+<!--CONTEÚDO PRINCIPAL DA PÁGINA HTML-->
+<!--Apresenta os elementos da principal parte, onde está o conteúdo mais importante da página.-->
+<main>
+
+    <div class="divider-1"></div>
+
+
+<!--SEÇÃO DA PÁGINA HTML-->
+<!--Apresenta os elementos de alguma seção da página.-->
+<section class="section" id="home">
+    <div class="container grid">
+        
+        <div class="image">
+            <img src="/imagens/imagem_tabuleirodexadrez.jpeg" alt="Tabuleiro de xadrez" />
+        </div>
+
+        <div class="text">
+            <h1>Diversificar para vencer</h1>
+            <p>Na BECKT Advogados, empresas e pessoas encontram orientação legal de alto nível em diversas áreas de atuação.</p>
+            <a class= "button" href="#">Agendar uma conversa online</a>
+        </div>
+    </div>
+</section>
+
+
+<div class="divider-1"></div>
+
+
+<section class="section">
+<div class="container">OUTRO CONTAINER PARA OUTRA SECTION</div>
+</section>
+
+<div class="divider-1"></div>
+
+</main>
+
+<!---RODAPÉ DA PÁGINA HTML-->
+<!--Apresenta os elementos da parte inferior da página.-->
+<footer>
+</footer>
+
+</body>
+</html>
