@@ -1,4 +1,4 @@
-# nlw2021.06
+# NLW_Codigos do zero
 Desenvolvimento de aplicação durante a Next Level Week de junho de 2021.
 
 CRONOGRAMA
