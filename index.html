@@ -21,22 +21,6 @@
 <!--Responsividade (relative vs static units e with vs without breakpoints) é um tema relevante cuja natureza pede que uma solução seja construída primeiramente para mobile (mobile first)-->
 <!--O Box Model é uma estrutura de espaçamentos entre elementos, indo do maior para o menor com: margin, border, padding, height, width (content)-->
 
-<!-- Exemplo de código em CSS:
-    :root {
-    --header-height: 4.5rem;
-  
-    /* colors */
-    --hue: 159;
-    /* HSL color mode */
-    --base-color: hsl(var(--hue) 36% 57%);
-    --base-color-second: hsl(var(--hue) 65% 88%);
-    --base-color-alt: hsl(var(--hue) 57% 53%);
-    --title-color: hsl(var(--hue) 41% 10%);
-    --text-color: hsl(0 0% 46%);
-    --text-color-light: hsl(0 0% 98%);
-    --body-color: hsl(0 0% 98%);
-  }-->
-
 <!--INÍCIO DO CÓDIGO EM HTML-->
 <!--Indica se tratar de um código em HTML5-->
 <!DOCTYPE html>
@@ -44,86 +28,193 @@
 <!--ABERTURA DO HTML-->
 <!--Abre e envolve todo os elementos do arquivo html, tanto os que são exibidos, como os que não são exibidos para os usuários.-->
 <html lang="pt-br">
-
-<!--HEAD DO HTML-->
-<!--Define regras e parâmetros gerais do arquivo HTML-->
-<head>
+  <!--HEAD DO HTML-->
+  <!--Define regras e parâmetros gerais do arquivo HTML-->
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BECKT Advogados</title>
 
-<!--ESTILOS VINCULADOS À PÁGINA-->
+    <!--ESTILOS VINCULADOS À PÁGINA-->
     <link rel="stylesheet" href="style.css" />
 
-<!--FONTES VINCULADAS À PÁGINA-->
+    <!--FONTES VINCULADAS À PÁGINA-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <!--ÍCONES VINCULADOS À PÁGINA-->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+  </head>
 
-<!--BODY DO HTML-->
-<!--Contém todo o conteúdo do HTML que é exibido ao usuário.-->
-<body>
+  <!--BODY DO HTML-->
+  <!--Contém todo o conteúdo do HTML que é exibido ao usuário.-->
+  <body>
+    <!--HEADER DO HTML-->
+    <!--Apresenta os elementos da parte superior da página.-->
+    <header id="header">
+      <!--TAG SEMÂNTICA PARA NAVEGAÇÃO-->
+      <!--Apresenta itens para navegação dentro ou para fora da página por meio de links.-->
+      <nav class="container">
+        <!--TÍTULOS EM HTML-->
+        <!--As tags h1 a h6 apresentam títulos na página.-->
+        <a class="logo" href="#"><span>BECKT</span> Advogados Associados</a>
 
-<!--HEADER DO HTML-->
-<!--Apresenta os elementos da parte superior da página.-->
-<header id="header">
+        <!--DIVISÃO DA PÁGINA HTML-->
+        <!--Apresenta os elementos de alguma divisão da página.-->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
 
-<!--TAG SEMÂNTICA PARA NAVEGAÇÃO-->
-<!--Apresenta itens para navegação dentro ou para fora da página por meio de links.-->
-<nav class="container">
+        <div class="toggle icon-info"></div>
+        <div class="toggle icon-cancel-circle"></div>
+      </nav>
+    </header>
 
-<!--TÍTULOS EM HTML-->
-<!--As tags h1 a h6 apresentam títulos na página.-->
-<a class="logo" href="#"><span>BECKT</span> Advogados Associados</a>
-    
-<!--DIVISÃO DA PÁGINA HTML-->
-<!--Apresenta os elementos de alguma divisão da página.-->
-<div class="menu">o o o</div>
+    <!--CONTEÚDO PRINCIPAL DA PÁGINA HTML-->
+    <!--Apresenta os elementos da principal parte, onde está o conteúdo mais importante da página.-->
+    <main>
+      <!--SEÇÃO DA PÁGINA HTML-->
+      <!--Apresenta os elementos de alguma seção da página.-->
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="/assets/imagens/imagem_tabuleirodexadrez.jpeg"
+              alt="Tabuleiro de xadrez"
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Diversificar para vencer</h2>
+            <p>
+              Na BECKT Advogados, empresas e pessoas encontram orientação legal
+              de alto nível em diversas áreas de atuação.
+            </p>
+            <a class="button" href="#">Agendar uma conversa online</a>
+          </div>
+        </div>
+      </section>
 
-</nav>
-</header>
+      <div class="divider-2"></div>
 
-<!--CONTEÚDO PRINCIPAL DA PÁGINA HTML-->
-<!--Apresenta os elementos da principal parte, onde está o conteúdo mais importante da página.-->
-<main>
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="/assets/imagens/quebracabeca.jpeg"
+              alt="Peças de quebra-cabeça"
+            />
+          </div>
+          <div class="text"></div>
+          <div class="title">Sobre a BECKT</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit.
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+      </section>
 
-    <div class="divider-1"></div>
+      <div class="divider-1"></div>
 
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Com uma equipe de profissionais que cobrem todos os grandes temas
+              do direito, as melhores soluções estão sempre disponíveis.
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-warning"></i>
+              <h3 class="title">Representação jurídica</h3>
+              <p>
+                Lorem ipsum dolor <strong>sit amet</strong> consectetur,
+                adipisicing elit.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-loop"></i>
+              <h3 class="title">Projetos e inovação em advocacia</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+            <div class="card">
+              <i class="icon-table2"></i>
+              <h3 class="title">
+                Serviços e processos locais, nacionais e internacionais
+              </h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
 
-<!--SEÇÃO DA PÁGINA HTML-->
-<!--Apresenta os elementos de alguma seção da página.-->
-<section class="section" id="home">
-    <div class="container grid">
-        
+        <!--
         <div class="image">
-            <img src="/imagens/imagem_tabuleirodexadrez.jpeg" alt="Tabuleiro de xadrez" />
+          <h3>Representação jurídica</h3>
+          <img
+            class="icon"
+            src="/assets/imagens/iconfinder_3957379_balance_decision_justice_law_scale_icon.svg"
+            alt="Balança 1"
+          />
+        </div>
+        <h2>Serviços</h2>
+        <p>
+          Serviços para todos os momentos da vida... da sua empresa ou da sua
+          família.
+        </p>
+
+        <div class="image">
+          <h3>Projetos e inovação em advocacia</h3>
+          <img
+            class="icon"
+            src="/assets/imagens/iconfinder_5861219_ethics_honest_justice_moral_news_icon.svg"
+            alt="Balança 1"
+          />
         </div>
 
-        <div class="text">
-            <h1>Diversificar para vencer</h1>
-            <p>Na BECKT Advogados, empresas e pessoas encontram orientação legal de alto nível em diversas áreas de atuação.</p>
-            <a class= "button" href="#">Agendar uma conversa online</a>
+        <div class="image">
+          <h3>Serviços e processos globais</h3>
+          <img
+            class="icon"
+            src="/assets/imagens/iconfinder_753941_lawyer_judge_justice_law_legal_icon.svg"
+            alt="Ícone que representa serviços e processos"
+          />
         </div>
-    </div>
-</section>
+      </section>
+    -->
 
+      <div class="divider-2"></div>
 
-<div class="divider-1"></div>
+      <section class="section" id="testimonials">
+        <div class="container grid">DEPOIMENTOS</div>
+      </section>
 
+      <div class="divider-1"></div>
 
-<section class="section">
-<div class="container">OUTRO CONTAINER PARA OUTRA SECTION</div>
-</section>
+      <section class="section" id="contact">
+        <div class="container grid">CONTATO</div>
+      </section>
 
-<div class="divider-1"></div>
+      <div class="divider-2"></div>
+    </main>
 
-</main>
+    <!---RODAPÉ DA PÁGINA HTML-->
+    <!--Apresenta os elementos da parte inferior da página.-->
+    <footer></footer>
 
-<!---RODAPÉ DA PÁGINA HTML-->
-<!--Apresenta os elementos da parte inferior da página.-->
-<footer>
-</footer>
-
-</body>
+    <!---INDICAÇÃO DO ARQUIVO JAVASCRIPT VINCULADO-->
+    <script src="main.js"></script>
+  </body>
 </html>
