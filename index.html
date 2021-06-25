@@ -35,6 +35,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BECKT Advogados</title>
 
+    <!--SWIPER - ACESSO A FUNCIONALIDADE SWIPER-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <!--ESTILOS VINCULADOS À PÁGINA-->
     <link rel="stylesheet" href="style.css" />
 
@@ -84,6 +91,8 @@
     <main>
       <!--SEÇÃO DA PÁGINA HTML-->
       <!--Apresenta os elementos de alguma seção da página.-->
+
+      <!--SEÇÃO HOME-->
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
@@ -105,6 +114,7 @@
 
       <div class="divider-2"></div>
 
+      <!--SEÇÃO SOBRE-->
       <section class="section" id="about">
         <div class="container grid">
           <div class="image">
@@ -127,6 +137,7 @@
 
       <div class="divider-1"></div>
 
+      <!--SEÇÃO DE SERVIÇOS-->
       <section class="section" id="services">
         <div class="container grid">
           <header>
@@ -159,9 +170,10 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <!--
-        <div class="image">
+      <!-- TENTATIVA ANTERIOR DE MONTAR AS SEÇÕES
+          <div class="image">
           <h3>Representação jurídica</h3>
           <img
             class="icon"
@@ -192,21 +204,116 @@
             alt="Ícone que representa serviços e processos"
           />
         </div>
-      </section>
     -->
 
       <div class="divider-2"></div>
 
+      <!--SEÇÃO DE DEPOIMENTOS-->
+      <!--Nesta se;áo temos um título h2, um texto iniciado por aspas destacadas um nome, uma foto de perfil redonda e o conteiner de um cartão. São 3 cartões desse rolando horizontalmente como carrossel. No total são 7 elementos por cartão.-->
       <section class="section" id="testimonials">
-        <div class="container grid">DEPOIMENTOS</div>
+        <div class="container">
+          <header>
+            <h2 class="˜title˜">DEPOIMENTOS</h2>
+          </header>
+          <!--Essa é a caixa principal que vai conter as demais caixas de cada cartão.-->
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Nesta seção temos um título h2, um texto iniciado por aspas
+                    destacadas, um nome, uma foto de perfil redonda e o
+                    conteiner de um cartão. São 3 cartões desse rolando
+                    horizontalmente como carrossel. No total são 7 elementos por
+                    cartão.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/5.jpg"
+                      alt="Foto do cliente Fulano da Silva"
+                    />
+                    Fulano da Silva
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    São 3 cartões desse rolando horizontalmente como carrossel.
+                    No total são 7 elementos por cartão.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/23.jpg"
+                      alt="Foto da cliente Cássia Aralho"
+                    />
+                    Cássia Aralho
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    kkkk um cartão. São 3 cartões desse rolando horizontalmente
+                    como carrossel. No total são 7 elementos por cartão.
+                  </p>
+                  <cite>
+                    <img
+                      src="/assets/imagens/Captura de Tela 2021-05-11 às 22.41.11.jpg"
+                      alt="Foto do cliente Armando Pinto"
+                    />
+                    Armando Pinto
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!-- SWIPER - If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </section>
 
       <div class="divider-1"></div>
 
+      <!--SEÇÃO DE CONTATO-->
       <section class="section" id="contact">
-        <div class="container grid">CONTATO</div>
-      </section>
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">ENTRE EM CONTATO</h2>
+            <p>
+              Estamos disponíveis por chat ou Whatsapp de segunda a sábado, das
+              8h às 20h. Aguardamos o seu contato!
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5561999887766&text=Olá! Preciso de orientação jurídica."
+              class="button"
+              target="_blank"
+            >
+              <i class="icon-bubbles"></i>
+              Clique para nos contatar
+            </a>
+          </div>
 
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-hour-glass"></i>61 99988-7766</li>
+              <li>
+                <i class="icon-checkmark"></i>SHIS 05 Conjunto 10 Casa 20, Lago
+                Sul, Brasília-DF
+              </li>
+              <li>
+                <i class="icon-sort-amount-asc"></i
+                >contato@becktadvogados.com.br
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <div class="divider-2"></div>
     </main>
 
@@ -214,7 +321,14 @@
     <!--Apresenta os elementos da parte inferior da página.-->
     <footer></footer>
 
-    <!---INDICAÇÃO DO ARQUIVO JAVASCRIPT VINCULADO-->
+    <!---INDICAÇÃO DOS ARQUIVOS JAVASCRIPT VINCULADOS-->
+    <!---O arquivo main é o primeiro a ser colocado, porém quando apontamos para outro arquivo javascript que traz uma funcionalidade adicional (como no exemplo abaixo adicionamos o Swiper e o Scrollreveal para fazer o carrossel da seção de depoimentos.)-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
     <script src="main.js"></script>
   </body>
 </html>
