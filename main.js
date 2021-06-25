@@ -80,16 +80,18 @@ for (const link of links) {
 
 //Mudar o header da página ao rolar a página.
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
+//O código abaixo foi construído na aula 3 e evoluído na aula 4 com a organização dentro da function changeHeaderWhenScroll
 
-window.addEventListener('scroll', function () {
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 //SEÇÃO DE DEPOIMENTOS COM CARROSSEL/SLIDER
 const swiper = new Swiper('.swiper-container', {
@@ -138,8 +140,34 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links
+  footer .brand, footer .social`,
   {
     interval: 100
   }
 )
+
+//BOTÃO DE VOLTAR PARA O TOPO
+
+/*Padrões de escrita de variáves: 
+camelCase
+  snake_case
+    kebab-case
+      PascalCase
+        UPPER_CASE_SNAKE_CASE*/
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
+  if (window.scrollY >= 2250) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+//O código abaixo executa 2 funções ao rolar a página (scroll)
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
+})
