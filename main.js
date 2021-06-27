@@ -1,13 +1,8 @@
 // alert(`Eu existo`)
-
 // char - string 'um texto aqui'
-
 // number - 1 2 3 4 9 11
-
 // boolean - true ou false
-
 // Objetos como conjuntos de atributos e funcionalidades
-
 // Funções, variáveis e constantes
 /*
 ;({
@@ -81,11 +76,10 @@ for (const link of links) {
 //Mudar o header da página ao rolar a página.
 
 //O código abaixo foi construído na aula 3 e evoluído na aula 4 com a organização dentro da function changeHeaderWhenScroll
+const header = document.querySelector('#header')
+const navHeight = header.offsetHeight
 
 function changeHeaderWhenScroll() {
-  const header = document.querySelector('#header')
-  const navHeight = header.offsetHeight
-
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
@@ -93,17 +87,23 @@ function changeHeaderWhenScroll() {
   }
 }
 
-//SEÇÃO DE DEPOIMENTOS COM CARROSSEL/SLIDER
+/*=== TESTIMONIALS CAROUSEL SLIDER SWIPER ===*/
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
-/* ESTE PEDAÇO FOI COPIADO DO SWIPER, MAS SUBSTITUÍDO PELA ESTRUTURA ACIMA.
+/* ESTE PEDAÇO ABAIXO FOI COPIADO DO SWIPER, MAS SUBSTITUÍDO PELA ESTRUTURA ACIMA.
 {
   // Optional parameters
   direction: 'vertical',
@@ -156,9 +156,9 @@ camelCase
       PascalCase
         UPPER_CASE_SNAKE_CASE*/
 
-function backToTop() {
-  const backToTopButton = document.querySelector('.back-to-top')
+const backToTopButton = document.querySelector('.back-to-top')
 
+function backToTop() {
   if (window.scrollY >= 2250) {
     backToTopButton.classList.add('show')
   } else {
@@ -166,8 +166,35 @@ function backToTop() {
   }
 }
 
+//Menu ativo conforme a seção visível na página
+const sections = document.querySelectorAll('main section[id]')
+
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.remove('active')
+    }
+  }
+}
+
 //O código abaixo executa 2 funções ao rolar a página (scroll)
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
+  activateMenuAtCurrentSection()
 })
